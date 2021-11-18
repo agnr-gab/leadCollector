@@ -1,2 +1,8 @@
-package br.com.zup.leadCollector.produto;public interface ProdutoRepository {
+package br.com.zup.leadCollector.produto;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ProdutoRepository extends CrudRepository<Produto, Integer> {
+
+    boolean existsByNome(String nome);
 }
